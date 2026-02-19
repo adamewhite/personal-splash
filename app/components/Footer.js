@@ -28,14 +28,14 @@ export default function Footer() {
                 adam@adamewhite.com
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="tel:+16467346779"
                 className="transition-opacity duration-200 hover:opacity-50"
               >
                 (646) 734-6779
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
