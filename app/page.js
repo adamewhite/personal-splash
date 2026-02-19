@@ -1,93 +1,45 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
+import ArabSpring from "./images/arab-spring.jpg";
 
 export default function Home() {
   return (
-    <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-        <ol className='list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
-          <li className='mb-2'>
-            HOLA MUCHACHO
-            <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly, mickey.</li>
-        </ol>
+    <main className="p-4">
+      {/* Hero — full viewport */}
+      <section className="relative h-[calc(100vh-2rem)] w-full">
+        <Image
+          src={ArabSpring}
+          alt="Arab Spring"
+          fill
+          priority
+          className="object-cover object-center"
+        />
 
-        <div className='flex gap-4 items-center flex-col sm:flex-row'>
-          <a
-            className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
+        {/* Gradient scrim for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+        {/* Text overlay — bottom left, Zwirner-style */}
+        <div className="absolute bottom-12 left-8 text-white">
+          <p className="mb-3 text-xs uppercase tracking-widest opacity-70">
+            UX Design / Data Strategy
+          </p>
+          <h2 className="mb-2 text-4xl font-light leading-tight md:text-5xl">
+            Adam White
+          </h2>
+          <p className="mb-6 text-lg font-light opacity-80">New York</p>
+          {/* <Link
+            href="/work"
+            className="inline-block border-b border-white pb-0.5 text-xs uppercase tracking-widest transition-opacity duration-200 hover:opacity-50"
           >
-            <Image
-              className='dark:invert'
-              src='https://nextjs.org/icons/vercel.svg'
-              alt='Vercel logomark'
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Read our docs
-          </a>
+            View Work
+          </Link> */}
         </div>
-      </main>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Scroll indicator — bottom right */}
+        <div className="writing-mode-vertical absolute bottom-12 right-8 text-xs uppercase tracking-widest text-white opacity-50">
+          Scroll
+        </div>
+      </section>
+    </main>
   );
 }
