@@ -1,23 +1,25 @@
-import { Instrument_Sans } from 'next/font/google';
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Instrument_Sans } from "next/font/google";
+import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-instrument-sans',
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-instrument-sans",
 });
 
 export const metadata = {
-  title: 'ADAM WHITE | UX and Data Strategy',
-  description: 'Product designer based in New York City',
+  title: "Adam White | UX and Data Strategy",
+  description: "Product designer based in New York City",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={`${instrumentSans.variable} antialiased bg-white text-black font-sans font-normal text-lg`}>
+    <html lang="en">
+      <body
+        className={`${instrumentSans.variable} bg-white font-sans text-lg font-normal text-black antialiased`}
+      >
         <Header />
         {children}
         <Footer />
