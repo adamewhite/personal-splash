@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between">
         {/* Name / brand */}
         <div>
-          <p className="mb-4 text-sm uppercase tracking-widest">Adam White</p>
-          <p className="text-xs tracking-wide text-white/50">
+          <p className="mb-4 text-base uppercase tracking-widest">Adam White</p>
+          <p className="text-sm tracking-wide text-white/50">
             UX Design / Data Strategy
             <br />
             New York
@@ -16,10 +16,10 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-white/50">
+          <p className="mb-4 text-sm uppercase tracking-widest text-white/50">
             Contact
           </p>
-          <ul className="flex flex-col gap-2 text-sm font-light">
+          <ul className="flex flex-col gap-2 text-base font-light">
             <li>
               <Link
                 href="mailto:adam@adamewhite.com"
@@ -41,10 +41,10 @@ export default function Footer() {
 
         {/* Navigation */}
         <div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-white/50">
+          <p className="mb-4 text-sm uppercase tracking-widest text-white/50">
             Navigate
           </p>
-          <ul className="flex flex-col gap-2 text-sm font-light">
+          <ul className="flex flex-col gap-2 text-base font-light">
             <li>
               <Link
                 href="/about-me"
@@ -66,7 +66,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-16 flex items-end justify-between border-t border-white/10 pt-8">
-        <p className="text-xs tracking-wide text-white/30">
+        <p className="text-sm tracking-wide text-white/30">
           &copy; {new Date().getFullYear()} Adam White
         </p>
       </div>

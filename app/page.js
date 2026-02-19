@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="p-4">
       {/* Hero — full viewport */}
-      <section className="relative h-[calc(100vh-2rem)] w-full">
+      <section className="relative h-[calc(100dvh-2rem)] w-full">
         <Image
           src={ArabSpring}
           alt="Arab Spring"

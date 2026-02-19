@@ -16,7 +16,7 @@ export default function AboutMe() {
       </aside>
 
       {/* Content — fills remaining space */}
-      <section className='flex-1 flex flex-col justify-center leading-loose px-4 lg:px-8'>
+      <section className='flex-1 flex flex-col justify-center leading-loose px-4 lg:px-8 pt-20 pb-16'>
         <p className='pb-5'>
           I&apos;m a UX designer and data strategist focused on building clear,
           effective experiences at the intersection of user needs and business
