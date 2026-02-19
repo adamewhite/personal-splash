@@ -10,7 +10,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata = {
-  title: 'Adam White',
+  title: 'ADAM WHITE | UX and Data Strategy',
   description: 'Product designer based in New York City',
 };
 
