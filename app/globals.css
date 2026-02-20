@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --footer: hsl(252, 85%, 12%);
+  --footer: #4d003e;
 }
 
 html {
