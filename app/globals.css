@@ -8,23 +8,21 @@
   --footer: hsl(252, 85%, 12%);
 }
 
-html {
-  background-color: var(--footer); /* bottom overscroll color */
-}
-
+/* The bottom overscroll/rubber-band area on iOS takes its color from
+   the body background, so the body is the footer color. The page
+   content sits in its own white wrapper (see layout.js), and the top
+   overscroll is masked white by the fixed cap below. */
+html,
 body {
+  background: var(--footer);
   color: var(--foreground);
-  background: var(--background);
 }
 
-/* White cap anchored to the top of the document — masks the footer
-   color on top overscroll. Using `absolute` (not `fixed`) keeps it
-   pinned to the top of the page so it never follows the viewport down
-   to the footer, where a fixed cap would bleed white into the bottom
-   overscroll area. */
+/* White cap fixed to the top of the viewport — masks the footer color
+   in the top overscroll area only. */
 body::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

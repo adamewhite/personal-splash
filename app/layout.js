@@ -18,10 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${instrumentSans.variable} bg-white font-sans text-lg font-normal text-black antialiased`}
+        className={`${instrumentSans.variable} font-sans text-lg font-normal text-black antialiased`}
       >
-        <Header />
-        {children}
+        <div className="bg-white">
+          <Header />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
