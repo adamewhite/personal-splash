@@ -11,7 +11,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata = {
   title: "Adam White | UX and Data Strategy",
-  description: "Product designer based in New York City",
+  description: "Product designer",
 };
 
 export default function RootLayout({ children }) {

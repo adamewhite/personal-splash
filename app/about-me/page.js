@@ -18,7 +18,14 @@ export default function AboutMe() {
       {/* Content — fills remaining space */}
       <section className='flex-1 flex flex-col justify-center leading-loose px-4 lg:px-8 pt-20 pb-16'>
         <p className='pb-5'>
-          I&apos;m a UX designer and data strategist focused on building clear,
+          I&apos;m a UX designer, data strategist and founder of{' '}
+          <a
+            href='https://vitura.studio'
+            className='underline underline-offset-4 hover:opacity-50 transition-opacity duration-200'
+          >
+            Vitura Studio
+          </a>
+          , where we are focused on building clear,
           effective experiences at the intersection of user needs and business
           goals.
         </p>

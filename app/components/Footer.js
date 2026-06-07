@@ -9,8 +9,6 @@ export default function Footer() {
           <p className="mb-4 text-base uppercase tracking-widest">Adam White</p>
           <p className="text-sm tracking-wide text-white/50">
             UX Design / Data Strategy
-            <br />
-            New York
           </p>
         </div>
 

@@ -26,7 +26,6 @@ export default function Home() {
           <h2 className="mb-2 text-4xl font-light leading-tight md:text-5xl">
             Adam White
           </h2>
-          <p className="mb-6 text-lg font-light opacity-80">New York</p>
           {/* <Link
             href="/work"
             className="inline-block border-b border-white pb-0.5 text-xs uppercase tracking-widest transition-opacity duration-200 hover:opacity-50"
