@@ -17,10 +17,14 @@ body {
   background: var(--background);
 }
 
-/* White cap fixed to top — masks the footer color on top overscroll */
+/* White cap anchored to the top of the document — masks the footer
+   color on top overscroll. Using `absolute` (not `fixed`) keeps it
+   pinned to the top of the page so it never follows the viewport down
+   to the footer, where a fixed cap would bleed white into the bottom
+   overscroll area. */
 body::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
