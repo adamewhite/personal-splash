@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="p-4">
       {/* Hero — full viewport */}
-      <section className="relative h-[calc(100dvh-2rem)] w-full">
+      <section className="relative h-[calc(100svh-2rem)] w-full">
         <Image
           src={ArabSpring}
           alt="Arab Spring"
@@ -34,10 +34,6 @@ export default function Home() {
           </Link> */}
         </div>
 
-        {/* Scroll indicator — bottom right */}
-        <div className="writing-mode-vertical absolute bottom-12 right-8 text-xs uppercase tracking-widest text-white opacity-50">
-          Scroll
-        </div>
       </section>
     </main>
   );
