@@ -30,8 +30,7 @@ export default function AboutMe() {
           goals.
         </p>
         <p className='pb-5'>
-          With a background in brand and marketing, I approach every problem
-          through research first — using data to inform decisions, reduce
+          With a background in brand creation and marketing, I approach every problem through research first — using data to inform decisions, reduce
           friction, and create interfaces that feel inevitable rather than
           designed.
         </p>
