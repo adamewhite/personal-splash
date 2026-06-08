@@ -1,23 +1,32 @@
+"use client";
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Cytwombley from '../images/cytwombley.jpeg';
+import FadeIn from '../components/FadeIn';
 
 export default function AboutMe() {
   return (
     <main className='min-h-screen p-4 flex flex-row gap-4'>
 
       {/* Left sidebar — full width on desktop, thin sliver on mobile/tablet */}
-      <aside className='relative shrink-0 w-[5vw] md:w-[12vw] lg:w-1/3'>
+      <motion.aside
+        className='relative shrink-0 w-[5vw] md:w-[12vw] lg:w-1/3'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Image
           src={Cytwombley}
           alt='Cy Twombley'
           fill
           className='object-cover object-left lg:object-center'
         />
-      </aside>
+      </motion.aside>
 
       {/* Content — fills remaining space */}
       <section className='flex-1 flex flex-col justify-center leading-loose px-4 lg:px-8 pt-20 pb-16'>
-        <p className='pb-5'>
+        <FadeIn as='p' className='pb-5' delay={0.15}>
           I&apos;m a UX designer, data strategist and founder of{' '}
           <a
             href='https://vitura.studio'
@@ -28,19 +37,19 @@ export default function AboutMe() {
           , where we are focused on building clear,
           effective experiences at the intersection of user needs and business
           goals.
-        </p>
-        <p className='pb-5'>
+        </FadeIn>
+        <FadeIn as='p' className='pb-5' delay={0.25}>
           With a background in brand creation and marketing, I approach every problem through research first — using data to inform decisions, reduce
           friction, and create interfaces that feel inevitable rather than
           designed.
-        </p>
-        <p className='pb-5'>
+        </FadeIn>
+        <FadeIn as='p' className='pb-5' delay={0.35}>
           Years of experience across design and strategy have given me a clear
           picture of where creative work succeeds or stalls. I believe the best
           outcomes come from rigorous thinking applied early, so that the work
           that ships is both useful and considered.
-        </p>
-        <p>
+        </FadeIn>
+        <FadeIn as='p' delay={0.45}>
           If you&apos;d like to know more or have a project you&apos;d like to discuss,
           don&apos;t hesitate to reach out:{' '}
           <a
@@ -50,18 +59,23 @@ export default function AboutMe() {
             adam@adamewhite.com
           </a>
           .
-        </p>
+        </FadeIn>
       </section>
 
       {/* Right sidebar — visible on mobile/tablet only, mirrors left */}
-      <aside className='relative shrink-0 w-[5vw] md:w-[12vw] lg:hidden'>
+      <motion.aside
+        className='relative shrink-0 w-[5vw] md:w-[12vw] lg:hidden'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Image
           src={Cytwombley}
           alt='Cy Twombley'
           fill
           className='object-cover object-right'
         />
-      </aside>
+      </motion.aside>
 
     </main>
   );
